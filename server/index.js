@@ -11,15 +11,20 @@ const userRoutes = require("./routes/userRoutes");
 const app = express();
 const server = http.createServer(app);
 
+app.use(cors({
+  origin: "https://socailmedia-1-0pmg.onrender.com", // your frontend URL
+  credentials: true,
+}));
+
+app.use(express.json());
+
 const io = socketIO(server, {
   cors: {
-    origin: "http://localhost:5173", // frontend origin
+    origin: "https://socailmedia-1-0pmg.onrender.com", // frontend origin
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
-
-app.use(cors());
-app.use(express.json());
 
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/auth',require('./routes/auth'));
