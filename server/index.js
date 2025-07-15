@@ -78,5 +78,5 @@ socket.on("stopTyping", ({ senderId, receiverId }) => {
 
 
 
-mongoose.connect('mongodb://localhost:27017/instagram-clone');
+mongoose.connect("mongodb+srv://durgesh:Durgesh%409927@cluster0.6z0anqg.mongodb.net/socialMedia?retryWrites=true&w=majority&appName=Cluster0");
 server.listen(5000, () => console.log("Server running on port 5000"));
