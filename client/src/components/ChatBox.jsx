@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 
 // Connect to socket server
-const socket = io("http://localhost:5000");
+const socket = io("https://socailmedia-sz9t.onrender.com");
 
 function ChatBox({ senderId, receiver }) {
   const [messages, setMessages] = useState([]);
@@ -56,7 +56,7 @@ function ChatBox({ senderId, receiver }) {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch(`http://localhost:5000/api/messages/${receiver._id}`, {
+    fetch(`https://socailmedia-sz9t.onrender.com/api/messages/${receiver._id}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -70,7 +70,7 @@ function ChatBox({ senderId, receiver }) {
     const token = localStorage.getItem("token");
     if (!text.trim()) return;
 
-    const res = await fetch("http://localhost:5000/api/messages", {
+    const res = await fetch("https://socailmedia-sz9t.onrender.com/api/messages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
