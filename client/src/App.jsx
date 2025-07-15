@@ -1,9 +1,9 @@
 import Nav from "./components/pages/Nav";
 import {BrowserRouter,Routes,Route, useLocation} from 'react-router-dom';
-import Search from "./components/pages/search";
+import Search from "./components/pages/Search";
 import Reels from "./components/pages/Reels";
 import Profile from "./components/pages/Profile";
-import Notifications from "./components/pages/notifications";
+import Notifications from "./components/pages/Notifications";
 import Messages from "./components/pages/Messages";
 import Home from "./components/pages/Home";
 import Explore from "./components/pages/Explore";
