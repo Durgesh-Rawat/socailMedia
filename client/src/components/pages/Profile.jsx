@@ -11,7 +11,7 @@ function Profile(){
   const token = localStorage.getItem("token");
   console.log("Token:", token); // ✅ Check if token is printed
 
-  fetch("http://localhost:5000/api/users/me", {
+  fetch("https://socailmedia-sz9t.onrender.com/api/users/me", {
     headers: {
       "Content-Type": "application/json",
       Authorization: "Bearer " + token,
