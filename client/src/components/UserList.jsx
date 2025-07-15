@@ -5,7 +5,7 @@ function UserList({ onSelect }) {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    fetch("http://localhost:5000/api/users", {
+    fetch("https://socailmedia-sz9t.onrender.com/api/users", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
