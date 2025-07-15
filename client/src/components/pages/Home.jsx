@@ -7,7 +7,7 @@ function Home(){
         useEffect(() => {
             const token = localStorage.getItem("token");
 
-        fetch("http://localhost:5000/api/posts",{
+        fetch("https://socailmedia-sz9t.onrender.com/api/posts",{
               headers: { "Content-Type": "application/json",
                           Authorization: `Bearer ${token}`}
         })
