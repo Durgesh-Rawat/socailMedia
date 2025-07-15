@@ -53,7 +53,7 @@ function Create(){
       const data = await res.json();
       console.log("Cloudinary response:", data);
 
-      await fetch("http://localhost:5000/api/posts", {
+      await fetch("https://socailmedia-sz9t.onrender.com/api/posts", {
         method: "POST",
         headers: { "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`
