@@ -51,7 +51,6 @@ function AutoPlayVideo({ src }) {
     <video
       ref={videoRef}
       src={src}
-      muted
       playsInline
       loop
       onClick={togglePlay}
